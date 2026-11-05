@@ -11,6 +11,8 @@ npm run site:verify    # builds site/dist/ and checks the publication files
 
 The website has no npm dependencies and can also be built independently with `npm run verify --prefix site`, without installing or building the desktop application. The repository's `npm run verify` includes the website checks. Generated `site/dist/` is ignored and contains only the product page, assets, crawler metadata, a real 404 page, and Cloudflare response headers.
 
+Production uses the zone's automatic Cloudflare Web Analytics setup. The content security policy permits the beacon from `static.cloudflareinsights.com` and reports to the same-origin `/cdn-cgi/rum` endpoint. The page and demo remain usable when analytics is blocked.
+
 ## Publishing
 
 Cloudflare Pages project **vorkflo-web** connects to **vrnrn/Vorkflo** with:
